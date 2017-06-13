@@ -10,11 +10,11 @@ class primeNumberGenerator(unittest.TestCase):
         self.assertEqual(True, type('samuel') is str, TypeError)
 
     def test_value_if_less_zero(self):
-        self.assertIsNone(list_primes(-1), 'Number cannot be less than zero')
+        self.assertEqual(list_primes(-1), 'Positive numbers only')
 
     def test_smallest_prime(self):
-        actual=list_primes(2)
-        expected=2
+        actual=list_primes(10)
+        expected=[2, 3, 5, 7]
         self.assertEqual(actual, expected, 'only 2 is the prime')
 
     def test_prime_numbers_of_ten(self):
