@@ -5,4 +5,4 @@ def list_primes(N):
                if num % i == 0:
                    break
            else:
-               print (num)
+               return num
